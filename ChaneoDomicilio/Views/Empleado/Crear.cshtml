@@ -1,0 +1,81 @@
+﻿@model ChaneoDomicilio.Models.Empleado
+
+@{
+    ViewData["Title"] = "Crear Empleado";
+}
+
+<h1>Crear Empleado</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Crear" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Campo Cédula -->
+            <div class="form-group">
+                <label asp-for="Cedula" class="control-label"></label>
+                <input asp-for="Cedula" class="form-control" />
+                <span asp-validation-for="Cedula" class="text-danger"></span>
+            </div>
+
+            <!-- Campo Fecha de Nacimiento -->
+            <div class="form-group">
+                <label asp-for="FechaNacimiento" class="control-label"></label>
+                <input type="date" asp-for="FechaNacimiento" class="form-control" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+
+            <!-- Campo Ingreso a la Empresa -->
+            <div class="form-group">
+                <label asp-for="IngresoEmpresa" class="control-label"></label>
+                <input type="date" asp-for="IngresoEmpresa" class="form-control" />
+                <span asp-validation-for="IngresoEmpresa" class="text-danger"></span>
+            </div>
+
+            <!-- Campo Salario Diario -->
+            <div class="form-group">
+                <label asp-for="SalarioDiario" class="control-label"></label>
+                <input asp-for="SalarioDiario" class="form-control" />
+                <span asp-validation-for="SalarioDiario" class="text-danger"></span>
+            </div>
+
+            <!-- Campo Vacaciones Acumuladas -->
+            <div class="form-group">
+                <label asp-for="VacacionesAcumulado" class="control-label"></label>
+                <input asp-for="VacacionesAcumulado" class="form-control" />
+                <span asp-validation-for="VacacionesAcumulado" class="text-danger"></span>
+            </div>
+
+            <!-- Campo Fecha de Retiro -->
+            <div class="form-group">
+                <label asp-for="FechaRetiro" class="control-label"></label>
+                <input type="date" asp-for="FechaRetiro" class="form-control" />
+                <span asp-validation-for="FechaRetiro" class="text-danger"></span>
+            </div>
+
+            <!-- Campo Liquidación -->
+            <div class="form-group">
+                <label asp-for="Liquidacion" class="control-label"></label>
+                <input asp-for="Liquidacion" class="form-control" />
+                <span asp-validation-for="Liquidacion" class="text-danger"></span>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Enlace para volver a la lista -->
+<div>
+    <a asp-action="Lista">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

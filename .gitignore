@@ -1,0 +1,51 @@
+## Ignorar carpetas de compilación (en cualquier combinación de mayúsculas)
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+
+## Paquetes NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Archivos de usuario / configuración
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.vcxproj.user
+
+## Logs
+*.log
+
+## Configuración local de IDE
+*.vspscc
+*.vssscc
+.vs/
+.vscode/
+
+## Build results
+*.dll
+*.exe
+*.app
+*.lib
+*.pdb
+
+## Archivos generados por Rider/JetBrains
+.idea/
+
+## Archivos temporales
+*.tmp
+*.bak
+*.swp
+
+## Otros
+TestResults/
+*.dbmdl
+*.bak
+*.sql
+*.cache
+*.config
